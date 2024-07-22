@@ -2,7 +2,7 @@ name: Run Python Script
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Adjust the cron schedule as needed
+    - cron: '* * * * *'  # Adjust the cron schedule as needed
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
