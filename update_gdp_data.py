@@ -62,8 +62,11 @@ if response.status_code == 200:
     # Consolidate data
     consolidated_data = df.groupby(['Date', 'NAICS Description'], as_index=False)['Value'].sum()
     
+    # Add a LastUpdated column with the current timestamp
+    consolidated_data['LastUpdated'] = datetime.now().isoformat()
+    
     # Save the consolidated DataFrame to a CSV file
     consolidated_data.to_csv("GDP2.csv", index=False)
-    print("Data saved to GDP.csv successfully.")
+    print("Data saved to GDP2.csv successfully.")
 else:
     print(f"Failed to retrieve data. Status code: {response.status_code}")
