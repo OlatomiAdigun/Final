@@ -31,6 +31,12 @@ if response.status_code == 200:
     
     # Extract the year from the "Date" column
     df["Date"] = df["Date"].apply(get_year)
+
+    # Make a copy of the unedited DataFrame
+    df_unedited = df.copy()
+    
+    # Save the unedited DataFrame to a CSV file
+    df_unedited.to_csv("GDP.csv", index=False)
     
     # Industry mapping
     industry_mapping = {
@@ -38,7 +44,7 @@ if response.status_code == 200:
         'Professional, scientific and technical services': 'Business & professional services',
         'Real estate and rental and leasing': 'Construction & construction trades',
         'Finance and insurance': 'Business & professional services',
-        'Information and cultural industries': 'Other industries',
+        'Information and cultural industries': 'Business & professional services',
         'Transportation and warehousing': 'Transportation, communication & utilities',
         'Retail trade': 'Wholesale and retail',
         'Wholesale trade': 'Wholesale and retail',
@@ -47,12 +53,12 @@ if response.status_code == 200:
         'Utilities': 'Transportation, communication & utilities',
         'Mining, quarrying, and oil and gas extraction': 'Mining & petroleum development',
         'Agriculture, forestry, fishing and hunting': 'Agriculture & forestry',
-        'Administrative and support, waste management and remediation services': 'Other industries',
+        'Administrative and support, waste management and remediation services': 'Business & professional services' ,
         'Educational services': 'Provincial & municipal government, education & health',
         'Health care and social assistance': 'Provincial & municipal government, education & health',
-        'Arts, entertainment and recreation': 'Other industries',
-        'Accommodation and food services': 'Other industries',
-        'Other services (except public administration)': 'Other industries',
+        'Arts, entertainment and recreation': 'Business & professional services',
+        'Accommodation and food services': 'Business & professional services',
+        'Other services (except public administration)': 'Business & professional services',
         'Public administration': 'Provincial & municipal government, education & health'
     }
 
