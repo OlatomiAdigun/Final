@@ -266,7 +266,7 @@ def get_data_2017():
     # Iterate over file names
     for file in sector_names:
         # Extract text from PDF
-        file_text = extract_text_from_pdf('2017/'+file[0:5] + "_2017.pdf")
+        file_text = extract_text_from_pdf('2017/'+file[0:5].lower() + "_2017.pdf")
         
         # Extract workers died
         match = re.search(r'Alberta\.(\d+)\nNumber of \nworkers \nwho died1', file_text)
