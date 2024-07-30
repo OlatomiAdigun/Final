@@ -963,7 +963,11 @@ replace_dict_injury ={'Sprain / Strain / Tear': 'Sprains/ Strains/ Tears',
                       'Systemic diseases and  disorders': 'Systemic diseases and disorders',
                       'Other injury': 'Other injuries'
                       }
+
+df["common_types_of_injuries_1"].replace(replace_dict_injury, inplace=True)
+df["common_types_of_injuries_2"].replace(replace_dict_injury, inplace=True)
 df["common_types_of_injuries_3"].replace(replace_dict_injury, inplace=True)
+
 
 
 # Save DataFrame to CSV
