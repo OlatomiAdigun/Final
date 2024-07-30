@@ -350,7 +350,7 @@ def get_data_2018():
     # Iterate over file names
     for file in sector_names:
         # Extract text from PDF
-        file_text = extract_text_from_pdf('2018/' + file[0:5] + "_2018.pdf")
+        file_text = extract_text_from_pdf('2018/' + file[0:5].lower() + "_2018.pdf")
         
         # Extract workers died
         match = re.search(r'Alberta\.(\d+)\nNumber of \nworkers \nwho died1', file_text)
@@ -435,7 +435,7 @@ def get_data_2019():
     # Iterate over file names
     for file in sector_names:
         # Extract text from PDF
-        file_text = extract_text_from_pdf('2019/' + file[0:5] + "_2019.pdf")
+        file_text = extract_text_from_pdf('2019/' + file[0:5].lower() + "_2019.pdf")
         
         # Extract workers died
         match = re.search(r'Alberta\.(\d+)\nNumber of \nworkers \nwho died1', file_text)
@@ -522,7 +522,7 @@ def get_data_2020():
     # Iterate over file names
     for file in sector_names:
         # Extract text from PDF
-        file_text = extract_text_from_pdf("2020/" + file[0:5] + "_2020.pdf")
+        file_text = extract_text_from_pdf("2020/" + file[0:5].lower() + "_2020.pdf")
         
         # Extract workers died
         match = re.search(r'2020\s?\n(\d+)\nNumber of \nworkers', file_text)
@@ -596,7 +596,7 @@ def get_data_2021():
     # Iterate over file names
     for file in sector_names:
         # Extract text from PDF
-        file_text = extract_text_from_pdf("2021/" + file[0:5] + "_2021.pdf")
+        file_text = extract_text_from_pdf("2021/" + file[0:5].lower() + "_2021.pdf")
         
         # Extract workers died
         match = re.search(r'Fatality trends 2017-2021\*(\d+)', file_text)
@@ -673,7 +673,7 @@ def get_data_2022():
     # Iterate over file names
     for file in sector_names:
         # Extract text from 
-        filename= "2022/" + file[0:5] + "_2022.pdf"
+        filename= "2022/" + file[0:5].lower() + "_2022.pdf"
         file_text = extract_text_from_pdf(filename)
         
         # Extract workers died
