@@ -1,4 +1,4 @@
-name: Run Python Scripts
+name: Run HS GDP Python Scripts
 
 on:
   schedule:
