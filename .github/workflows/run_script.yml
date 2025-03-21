@@ -1,9 +1,9 @@
 name: Run HS GDP Python Scripts
 
-on:
-  schedule:
-    - cron: '0 * * * *'  # Adjust the cron schedule as needed
-  workflow_dispatch:  # Allows manual triggering
+#on:
+ # schedule:
+  #  - cron: '0 * * * *'  # Adjust the cron schedule as needed
+  #workflow_dispatch:  # Allows manual triggering
 
 jobs:
   run_scripts:
